@@ -19,11 +19,6 @@ class TestBear < Minitest::Test
     assert_equal([@Carp], @Yogi.food)
   end
 
-  def test_take_fish__fish_not_in_river()
-    @Yogi.take_fish(@Amazon, @Carp)
-    assert_equal([@Salmon], @Amazon.fish)
-  end
-
   def test_roar()
     result = @Yogi.roar("I want more fish")
     assert_equal("I WANT MORE FISH", result)
@@ -39,4 +34,5 @@ class TestBear < Minitest::Test
     result = @Yogi.food_count()
     assert_equal(1, result)
   end
+
 end
